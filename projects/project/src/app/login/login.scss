@@ -1,0 +1,112 @@
+@import url("https://use.fontawesome.com/releases/v5.8.2/css/brands.css");
+.header{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.row{
+  margin-top: 10px;
+}
+
+.error{
+  color: red;
+}
+.container{
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  left: 50%;
+  padding-top: 150px;
+  transform: translateX(-50%);
+  form{
+    width: 100%;
+    .form-group{
+      width: 300px;
+      height: 30px;
+      margin: 10px calc(50% - 150px) 0px;
+      display: inline-block;
+      label{
+        width: 300px;
+        height: 30px;
+        margin: 10px calc(50% - 150px) 0px;
+        display: inline-block;
+      }
+      input{
+        width: 300px;
+        height: 30px;
+        margin: 0 calc(50% - 150px);
+        box-sizing: border-box;
+        border-radius: 4px;
+        background-color: #fff;
+        border: 1px solid #eaeaea;
+      }
+    }
+  }
+  .register_string{
+    width: 300px;
+    height: 30px;
+    margin: 10px calc(50% - 150px) 0px;
+    display: inline-block;
+    p{
+      font-size: 14px;
+      a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: #6FB97B;
+      }
+    }
+  }
+  button{
+    width: 300px;
+    height: 30px;
+    margin: 10px calc(50% - 150px) 0px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    color: #272727;
+    overflow: hidden;
+    padding: 6px 0;
+    position: relative;
+    &:hover{
+      cursor: pointer;
+    }
+    &[type="submit"]{
+      margin-top: 30px;
+    }
+    &:before{
+      font-family: "Font Awesome 5 Brands";
+      height: 100%;
+      margin-top: -8px;
+      width: 20px;
+      position: absolute;
+      display: flex;
+      -webkit-font-smoothing: antialiased;
+      align-items: center;
+      padding: 0 5px 0 10px;
+      text-align: -webkit-match-parent;
+      font-size: 18px;
+      border-right: 1px solid #eaeaea;
+    }
+    &.facebook-login{
+      &:before{
+        color: #ffffff;
+        content: '\f39e';
+        background-color: #3b5998;
+      }
+    }
+    &.google-login{
+      &:before{
+        color: #4285f4;
+        content: '\f1a0';
+      }
+    }
+    &.twitter-login{
+      &:before{
+        color: #38A1F3;
+        content: '\f099';
+      }
+    }
+  }
+}

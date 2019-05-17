@@ -1,0 +1,29 @@
+<nav>
+  <ul>
+    <li>
+      <a [routerLink]="['/']">Pricing</a>
+    </li>
+    <li>
+      <a [routerLink]="['/']">Features</a>
+    </li>
+    <li>
+      <a [routerLink]="['/dashboard']">Explore</a>
+    </li>
+    <li>
+      <a [routerLink]="['/']">Support</a>
+    </li>
+    <li *ngIf="status" class="profile">
+      <div class="profile-image-cont"><img src="{{userImage}}" alt=""></div>{{status}}
+      <ul>
+        <li [routerLink]="['/user']">Profile</li>
+        <li (click)="logout()">Logout</li>
+      </ul>
+    </li>
+  </ul>
+  <button class="header-button" [routerLink]="['/login']" *ngIf="toBeLoggedIn">
+    Sign In
+  </button>
+  <button class="header-button" *ngIf="status">
+    Giveaway
+  </button>
+</nav>
